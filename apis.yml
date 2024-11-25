@@ -1,5 +1,5 @@
 ---
-aid: predictive-oncology-model-and-data-clearinghouse-modac-
+aid: predictive-oncology-model-and-data-clearinghouse
 name: Predictive Oncology Model and Data Clearinghouse (MoDaC)
 description: The Predictive Oncology Model and Data Clearinghouse (MoDaC) REST
   API provides the ability to upload and download assets, manage associated
@@ -16,7 +16,7 @@ modified: 2024-11-07
 url: https://raw.githubusercontent.com/api-search/predictive-oncology-model-and-data-clearinghouse-modac-/refs/heads/main/apis.yml
 specificationVersion: "0.19"
 apis:
-  - aid: predictive-oncology-model-and-data-clearinghouse-modac-:predictive-oncology-model-and-data-clearinghouse-modac-
+  - aid: predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse
     name: Predictive Oncology Model and Data Clearinghouse (MoDaC)
     description: The Predictive Oncology Model and Data Clearinghouse (MoDaC) REST
       API provides the ability to upload and download assets, manage associated
