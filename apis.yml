@@ -6,7 +6,7 @@ apis:
   - aid: >-
 
       predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse
-    name: Predictive Oncology Model and Data Clearinghouse (MoDaC)
+    name: Predictive Oncology Model and Data Clearinghouse
     tags:
       - API
     humanURL: https://modac.cancer.gov/
@@ -19,7 +19,7 @@ apis:
       provides the ability to upload and download assets, manage associated
       metadata, and search for assets against these metadata. Assets include
       datasets and machine learning models.
-name: Predictive Oncology Model and Data Clearinghouse (MoDaC)
+name: Predictive Oncology Model and Data Clearinghouse
 tags:
   - Cancer
   - Machine Learning
