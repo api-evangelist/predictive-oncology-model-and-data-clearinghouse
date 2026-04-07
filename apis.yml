@@ -7,8 +7,7 @@ apis:
 
       predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse
     name: Predictive Oncology Model and Data Clearinghouse
-    tags:
-      - API
+    tags: []
     humanURL: https://modac.cancer.gov/
     properties:
       - url: https://modac.cancer.gov/
@@ -21,8 +20,8 @@ apis:
 name: Predictive Oncology Model and Data Clearinghouse
 tags:
   - Cancer
-  - Machine Learning
   - Clincial
+  - Machine Learning
 type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
