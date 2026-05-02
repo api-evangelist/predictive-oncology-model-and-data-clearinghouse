@@ -1,47 +1,52 @@
-# Predictive Oncology Model and Data Clearinghouse (MoDaC) (predictive-oncology-model-and-data-clearinghouse)
-Predictive Oncology Model and Data Clearinghouse (MoDaC) is a cutting-edge platform that utilizes advanced algorithms and machine learning techniques to analyze complex datasets related to cancer research. MoDaC aims to predict patient outcomes, optimize treatment protocols, and ultimately improve the effectiveness of cancer therapies. By integrating various data sources, including genetic information, clinical data, and imaging studies, MoDaC provides oncologists and researchers with valuable insights that can help tailor treatment plans to individual patients. Additionally, MoDaC serves as a centralized hub for storing and sharing data, fostering collaboration among researchers and accelerating the advancement of cancer research.
+# Predictive Oncology Model and Data Clearinghouse (predictive-oncology-model-and-data-clearinghouse)
 
-**URL:** [Visit APIs.json URL](
-https://raw.githubusercontent.com/api-search/predictive-oncology-model-and-data-clearinghouse-modac-/refs/heads/main/apis.yml)
+The Predictive Oncology Model and Data Clearinghouse (MoDaC) is a National Cancer Institute platform that supports cancer research through advanced algorithms and machine learning techniques to analyze complex datasets, including genetic information, clinical data, and imaging studies. MoDaC serves as a centralized hub for storing, sharing, and discovering cancer research datasets and trained models, fostering collaboration among researchers and accelerating the advancement of cancer therapies.
+
+**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/predictive-oncology-model-and-data-clearinghouse/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Contract 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+- **Type:** Contract
+- **Position:** Consumer
+- **Access:** 3rd-Party
 
-## Tags:
+## Tags
 
- - Cancer, Machine Learning, Clincial
+- Cancer Research, Clinical Data, Datasets, Machine Learning, Oncology
 
 ## Timestamps
 
-- **Created:** 2024-11-07 
-- **Modified:** 2025-01-02 
+- **Created:** 2024-11-07
+- **Modified:** 2026-04-28
 
 ## APIs
 
-### Predictive Oncology Model and Data Clearinghouse (MoDaC)
+### MoDaC REST API
 
-The Predictive Oncology Model and Data Clearinghouse (MoDaC) REST API
-provides the ability to upload and download assets, manage associated
-metadata, and search for assets against these metadata. Assets include
-datasets and machine learning models.
+The MoDaC REST API provides programmatic access to upload and download assets, manage associated metadata, and search for assets against these metadata. Assets include datasets and machine learning models contributed by the cancer research community. The API is documented in OpenAPI 3.0 format and exposes endpoints for bulk registration, data object and collection management, metadata queries, and permissions handling.
 
 **Human URL:** [https://modac.cancer.gov/](https://modac.cancer.gov/)
 
+#### Tags
 
-#### Tags:
-
- - API
+- Cancer Research, Datasets, Machine Learning, REST API
 
 #### Properties
 
 - [Documentation](https://modac.cancer.gov/)
+- [Swagger UI](https://modac.cancer.gov/swagger-ui/4.14.0/index.html)
+- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/predictive-oncology-model-and-data-clearinghouse/refs/heads/main/openapi/predictive-oncology-model-and-data-clearinghouse-openapi.json)
+
+## Common Properties
+
+- [Portal](https://modac.cancer.gov/)
+- [About](https://modac.cancer.gov/aboutPage)
+- [Help](https://modac.cancer.gov/helpPage)
+- [Contact](https://modac.cancer.gov/contactUsPage)
+- [Login](https://modac.cancer.gov/login)
 
 ## Maintainers
 
 **FN:** Kin Lane
 
-**Email:** info@apievangelist.com
-
+**Email:** kin@apievangelist.com
