@@ -8,7 +8,7 @@ description: >-
   serves as a centralized hub for storing, sharing, and discovering cancer
   research datasets and trained models, fostering collaboration among
   researchers and accelerating the advancement of cancer therapies.
-type: Contract
+kind: contract
 position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
