@@ -1,0 +1,76 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: MoDaC API — delete-data-file-controller
+  description: 'MoDaC API — delete-data-file-controller. 1 operations. Lead operation: delete-data-file-controller. Self-contained
+    Naftiko capability covering one Predictive Oncology Model And Data Clearinghouse business surface.'
+  tags:
+  - Predictive Oncology Model And Data Clearinghouse
+  - delete-data-file-controller
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PREDICTIVE_ONCOLOGY_MODEL_AND_DATA_CLEARINGHOUSE_API_KEY: PREDICTIVE_ONCOLOGY_MODEL_AND_DATA_CLEARINGHOUSE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: predictive-oncology-model-and-data-clearinghouse-delete-data-file-controller
+    baseUri: http://localhost:8080
+    description: MoDaC API — delete-data-file-controller business capability. Self-contained, no shared references.
+    resources:
+    - name: delete-datafile
+      path: /delete/datafile
+      operations:
+      - name: deleteobject
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: deletepath
+          in: query
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: predictive-oncology-model-and-data-clearinghouse-delete-data-file-controller-rest
+    port: 8080
+    description: REST adapter for MoDaC API — delete-data-file-controller. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/delete/datafile
+      name: delete-datafile
+      description: REST surface for delete-datafile.
+      operations:
+      - method: POST
+        name: deleteobject
+        description: deleteobject
+        call: predictive-oncology-model-and-data-clearinghouse-delete-data-file-controller.deleteobject
+        with:
+          deletepath: rest.deletepath
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: predictive-oncology-model-and-data-clearinghouse-delete-data-file-controller-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for MoDaC API — delete-data-file-controller. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: deleteobject
+      description: deleteobject
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-delete-data-file-controller.deleteobject
+      with:
+        deletepath: tools.deletepath
+      outputParameters:
+      - type: object
+        mapping: $.

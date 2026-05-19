@@ -1,0 +1,93 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: MoDaC API — asset-details-controller
+  description: 'MoDaC API — asset-details-controller. 1 operations. Lead operation: asset-details-controller. Self-contained
+    Naftiko capability covering one Predictive Oncology Model And Data Clearinghouse business surface.'
+  tags:
+  - Predictive Oncology Model And Data Clearinghouse
+  - asset-details-controller
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PREDICTIVE_ONCOLOGY_MODEL_AND_DATA_CLEARINGHOUSE_API_KEY: PREDICTIVE_ONCOLOGY_MODEL_AND_DATA_CLEARINGHOUSE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: predictive-oncology-model-and-data-clearinghouse-asset-details-controller
+    baseUri: http://localhost:8080
+    description: MoDaC API — asset-details-controller business capability. Self-contained, no shared references.
+    resources:
+    - name: predictionAccessGroups
+      path: /predictionAccessGroups
+      operations:
+      - name: savepredictionaccessgroups
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: predCollId
+          in: query
+          type: string
+          required: true
+        - name: predCollPath
+          in: query
+          type: string
+          required: true
+        - name: selectedGrps[]
+          in: query
+          type: array
+        - name: isPublic
+          in: query
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: predictive-oncology-model-and-data-clearinghouse-asset-details-controller-rest
+    port: 8080
+    description: REST adapter for MoDaC API — asset-details-controller. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/predictionaccessgroups
+      name: predictionaccessgroups
+      description: REST surface for predictionAccessGroups.
+      operations:
+      - method: POST
+        name: savepredictionaccessgroups
+        description: savepredictionaccessgroups
+        call: predictive-oncology-model-and-data-clearinghouse-asset-details-controller.savepredictionaccessgroups
+        with:
+          predCollId: rest.predCollId
+          predCollPath: rest.predCollPath
+          selectedGrps[]: rest.selectedGrps[]
+          isPublic: rest.isPublic
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: predictive-oncology-model-and-data-clearinghouse-asset-details-controller-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for MoDaC API — asset-details-controller. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: savepredictionaccessgroups
+      description: savepredictionaccessgroups
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-asset-details-controller.savepredictionaccessgroups
+      with:
+        predCollId: tools.predCollId
+        predCollPath: tools.predCollPath
+        selectedGrps[]: tools.selectedGrps[]
+        isPublic: tools.isPublic
+      outputParameters:
+      - type: object
+        mapping: $.

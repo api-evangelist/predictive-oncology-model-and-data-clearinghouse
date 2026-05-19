@@ -1,0 +1,791 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: MoDaC API — rest-api-common-controller
+  description: 'MoDaC API — rest-api-common-controller. 20 operations. Lead operation: rest-api-common-controller. Self-contained
+    Naftiko capability covering one Predictive Oncology Model And Data Clearinghouse business surface.'
+  tags:
+  - Predictive Oncology Model And Data Clearinghouse
+  - rest-api-common-controller
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PREDICTIVE_ONCOLOGY_MODEL_AND_DATA_CLEARINGHOUSE_API_KEY: PREDICTIVE_ONCOLOGY_MODEL_AND_DATA_CLEARINGHOUSE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller
+    baseUri: http://localhost:8080
+    description: MoDaC API — rest-api-common-controller business capability. Self-contained, no shared references.
+    resources:
+    - name: api-authenticate
+      path: /api/authenticate
+      operations:
+      - name: authenticate
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-collection-**
+      path: /api/collection/**
+      operations:
+      - name: getcollection
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: list
+          in: query
+          type: boolean
+        - name: includeAcl
+          in: query
+          type: boolean
+      - name: registercollection
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: api-collection-download-**
+      path: /api/collection/download/**
+      operations:
+      - name: getcollectiondownloadstatus
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-collection-query
+      path: /api/collection/query
+      operations:
+      - name: querycollections
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: api-dataObject-**-generateDownloadRequestURL
+      path: /api/dataObject/**/generateDownloadRequestURL
+      operations:
+      - name: generatedownloadrequesturl
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-dataObject-**-syncDownload
+      path: /api/dataObject/**/syncDownload
+      operations:
+      - name: synchronousdownload
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-dataObject-download-**
+      path: /api/dataObject/download/**
+      operations:
+      - name: getdataobjectdownloadstatus
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-dataObject-query
+      path: /api/dataObject/query
+      operations:
+      - name: querydataobjects
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: returnParent
+          in: query
+          type: boolean
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: api-download-**
+      path: /api/download/**
+      operations:
+      - name: getdataobjectsorcollectionsdownloadstatus
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-model-evaluate-**
+      path: /api/model/evaluate/**
+      operations:
+      - name: getstatusbytaskid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: performmodelevaluationfordatasets
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: type
+          in: query
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: api-models-evaluate-**
+      path: /api/models/evaluate/**
+      operations:
+      - name: performmodelevaluationforreferencedatasets
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: api-v2-collection-**-download
+      path: /api/v2/collection/**/download
+      operations:
+      - name: collectiondownload
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: api-v2-dataObject-**
+      path: /api/v2/dataObject/**
+      operations:
+      - name: getdataobject
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: includeAcl
+          in: query
+          type: boolean
+        - name: excludeParentMetadata
+          in: query
+          type: boolean
+      - name: registerdataobject
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: api-v2-dataObject-**-download
+      path: /api/v2/dataObject/**/download
+      operations:
+      - name: syncandasynchronousdownload
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: api-v2-download
+      path: /api/v2/download
+      operations:
+      - name: downloaddataobjectsorcollections
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: api-v2-registration
+      path: /api/v2/registration
+      operations:
+      - name: bulkregistration
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: api-v2-registration-**
+      path: /api/v2/registration/**
+      operations:
+      - name: getdataobjectsregistrationstatus
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller-rest
+    port: 8080
+    description: REST adapter for MoDaC API — rest-api-common-controller. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/api/authenticate
+      name: api-authenticate
+      description: REST surface for api-authenticate.
+      operations:
+      - method: GET
+        name: authenticate
+        description: authenticate
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.authenticate
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/collection/
+      name: api-collection
+      description: REST surface for api-collection-**.
+      operations:
+      - method: GET
+        name: getcollection
+        description: getcollection
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getcollection
+        with:
+          list: rest.list
+          includeAcl: rest.includeAcl
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: registercollection
+        description: registercollection
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.registercollection
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/collection/download/
+      name: api-collection-download
+      description: REST surface for api-collection-download-**.
+      operations:
+      - method: GET
+        name: getcollectiondownloadstatus
+        description: getcollectiondownloadstatus
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getcollectiondownloadstatus
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/collection/query
+      name: api-collection-query
+      description: REST surface for api-collection-query.
+      operations:
+      - method: POST
+        name: querycollections
+        description: querycollections
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.querycollections
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/dataobject//generatedownloadrequesturl
+      name: api-dataobject-generatedownloadrequesturl
+      description: REST surface for api-dataObject-**-generateDownloadRequestURL.
+      operations:
+      - method: POST
+        name: generatedownloadrequesturl
+        description: generatedownloadrequesturl
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.generatedownloadrequesturl
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/dataobject//syncdownload
+      name: api-dataobject-syncdownload
+      description: REST surface for api-dataObject-**-syncDownload.
+      operations:
+      - method: POST
+        name: synchronousdownload
+        description: synchronousdownload
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.synchronousdownload
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/dataobject/download/
+      name: api-dataobject-download
+      description: REST surface for api-dataObject-download-**.
+      operations:
+      - method: GET
+        name: getdataobjectdownloadstatus
+        description: getdataobjectdownloadstatus
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getdataobjectdownloadstatus
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/dataobject/query
+      name: api-dataobject-query
+      description: REST surface for api-dataObject-query.
+      operations:
+      - method: POST
+        name: querydataobjects
+        description: querydataobjects
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.querydataobjects
+        with:
+          returnParent: rest.returnParent
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/download/
+      name: api-download
+      description: REST surface for api-download-**.
+      operations:
+      - method: GET
+        name: getdataobjectsorcollectionsdownloadstatus
+        description: getdataobjectsorcollectionsdownloadstatus
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getdataobjectsorcollectionsdownloadstatus
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/model/evaluate/
+      name: api-model-evaluate
+      description: REST surface for api-model-evaluate-**.
+      operations:
+      - method: GET
+        name: getstatusbytaskid
+        description: getstatusbytaskid
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getstatusbytaskid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: performmodelevaluationfordatasets
+        description: performmodelevaluationfordatasets
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.performmodelevaluationfordatasets
+        with:
+          type: rest.type
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/models/evaluate/
+      name: api-models-evaluate
+      description: REST surface for api-models-evaluate-**.
+      operations:
+      - method: POST
+        name: performmodelevaluationforreferencedatasets
+        description: performmodelevaluationforreferencedatasets
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.performmodelevaluationforreferencedatasets
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/collection//download
+      name: api-v2-collection-download
+      description: REST surface for api-v2-collection-**-download.
+      operations:
+      - method: POST
+        name: collectiondownload
+        description: collectiondownload
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.collectiondownload
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/dataobject/
+      name: api-v2-dataobject
+      description: REST surface for api-v2-dataObject-**.
+      operations:
+      - method: GET
+        name: getdataobject
+        description: getdataobject
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getdataobject
+        with:
+          includeAcl: rest.includeAcl
+          excludeParentMetadata: rest.excludeParentMetadata
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: registerdataobject
+        description: registerdataobject
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.registerdataobject
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/dataobject//download
+      name: api-v2-dataobject-download
+      description: REST surface for api-v2-dataObject-**-download.
+      operations:
+      - method: POST
+        name: syncandasynchronousdownload
+        description: syncandasynchronousdownload
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.syncandasynchronousdownload
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/download
+      name: api-v2-download
+      description: REST surface for api-v2-download.
+      operations:
+      - method: POST
+        name: downloaddataobjectsorcollections
+        description: downloaddataobjectsorcollections
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.downloaddataobjectsorcollections
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/registration
+      name: api-v2-registration
+      description: REST surface for api-v2-registration.
+      operations:
+      - method: PUT
+        name: bulkregistration
+        description: bulkregistration
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.bulkregistration
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/registration/
+      name: api-v2-registration
+      description: REST surface for api-v2-registration-**.
+      operations:
+      - method: GET
+        name: getdataobjectsregistrationstatus
+        description: getdataobjectsregistrationstatus
+        call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getdataobjectsregistrationstatus
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for MoDaC API — rest-api-common-controller. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: authenticate
+      description: authenticate
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.authenticate
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getcollection
+      description: getcollection
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getcollection
+      with:
+        list: tools.list
+        includeAcl: tools.includeAcl
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: registercollection
+      description: registercollection
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.registercollection
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getcollectiondownloadstatus
+      description: getcollectiondownloadstatus
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getcollectiondownloadstatus
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: querycollections
+      description: querycollections
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.querycollections
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: generatedownloadrequesturl
+      description: generatedownloadrequesturl
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.generatedownloadrequesturl
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: synchronousdownload
+      description: synchronousdownload
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.synchronousdownload
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdataobjectdownloadstatus
+      description: getdataobjectdownloadstatus
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getdataobjectdownloadstatus
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: querydataobjects
+      description: querydataobjects
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.querydataobjects
+      with:
+        returnParent: tools.returnParent
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdataobjectsorcollectionsdownloadstatus
+      description: getdataobjectsorcollectionsdownloadstatus
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getdataobjectsorcollectionsdownloadstatus
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getstatusbytaskid
+      description: getstatusbytaskid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getstatusbytaskid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: performmodelevaluationfordatasets
+      description: performmodelevaluationfordatasets
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.performmodelevaluationfordatasets
+      with:
+        type: tools.type
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: performmodelevaluationforreferencedatasets
+      description: performmodelevaluationforreferencedatasets
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.performmodelevaluationforreferencedatasets
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: collectiondownload
+      description: collectiondownload
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.collectiondownload
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdataobject
+      description: getdataobject
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getdataobject
+      with:
+        includeAcl: tools.includeAcl
+        excludeParentMetadata: tools.excludeParentMetadata
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: registerdataobject
+      description: registerdataobject
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.registerdataobject
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: syncandasynchronousdownload
+      description: syncandasynchronousdownload
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.syncandasynchronousdownload
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: downloaddataobjectsorcollections
+      description: downloaddataobjectsorcollections
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.downloaddataobjectsorcollections
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: bulkregistration
+      description: bulkregistration
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.bulkregistration
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdataobjectsregistrationstatus
+      description: getdataobjectsregistrationstatus
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller.getdataobjectsregistrationstatus
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,77 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: MoDaC API — doe-sync-download-controller
+  description: 'MoDaC API — doe-sync-download-controller. 1 operations. Lead operation: doe-sync-download-controller. Self-contained
+    Naftiko capability covering one Predictive Oncology Model And Data Clearinghouse business surface.'
+  tags:
+  - Predictive Oncology Model And Data Clearinghouse
+  - doe-sync-download-controller
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PREDICTIVE_ONCOLOGY_MODEL_AND_DATA_CLEARINGHOUSE_API_KEY: PREDICTIVE_ONCOLOGY_MODEL_AND_DATA_CLEARINGHOUSE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: predictive-oncology-model-and-data-clearinghouse-doe-sync-download-controller
+    baseUri: http://localhost:8080
+    description: MoDaC API — doe-sync-download-controller business capability. Self-contained, no shared references.
+    resources:
+    - name: downloadsync
+      path: /downloadsync
+      operations:
+      - name: download
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+  exposes:
+  - type: rest
+    namespace: predictive-oncology-model-and-data-clearinghouse-doe-sync-download-controller-rest
+    port: 8080
+    description: REST adapter for MoDaC API — doe-sync-download-controller. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/downloadsync
+      name: downloadsync
+      description: REST surface for downloadsync.
+      operations:
+      - method: POST
+        name: download
+        description: download
+        call: predictive-oncology-model-and-data-clearinghouse-doe-sync-download-controller.download
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: predictive-oncology-model-and-data-clearinghouse-doe-sync-download-controller-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for MoDaC API — doe-sync-download-controller. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: download
+      description: download
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-doe-sync-download-controller.download
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

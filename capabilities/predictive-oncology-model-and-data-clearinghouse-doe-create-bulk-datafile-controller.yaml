@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: MoDaC API — doe-create-bulk-datafile-controller
+  description: 'MoDaC API — doe-create-bulk-datafile-controller. 1 operations. Lead operation: doe-create-bulk-datafile-controller.
+    Self-contained Naftiko capability covering one Predictive Oncology Model And Data Clearinghouse business surface.'
+  tags:
+  - Predictive Oncology Model And Data Clearinghouse
+  - doe-create-bulk-datafile-controller
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PREDICTIVE_ONCOLOGY_MODEL_AND_DATA_CLEARINGHOUSE_API_KEY: PREDICTIVE_ONCOLOGY_MODEL_AND_DATA_CLEARINGHOUSE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: predictive-oncology-model-and-data-clearinghouse-doe-create-bulk-datafile-controller
+    baseUri: http://localhost:8080
+    description: MoDaC API — doe-create-bulk-datafile-controller business capability. Self-contained, no shared references.
+    resources:
+    - name: addbulk
+      path: /addbulk
+      operations:
+      - name: createdatafile
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: isFormBulkAssetUpload
+          in: query
+          type: boolean
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+  exposes:
+  - type: rest
+    namespace: predictive-oncology-model-and-data-clearinghouse-doe-create-bulk-datafile-controller-rest
+    port: 8080
+    description: REST adapter for MoDaC API — doe-create-bulk-datafile-controller. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/addbulk
+      name: addbulk
+      description: REST surface for addbulk.
+      operations:
+      - method: POST
+        name: createdatafile
+        description: createdatafile
+        call: predictive-oncology-model-and-data-clearinghouse-doe-create-bulk-datafile-controller.createdatafile
+        with:
+          isFormBulkAssetUpload: rest.isFormBulkAssetUpload
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: predictive-oncology-model-and-data-clearinghouse-doe-create-bulk-datafile-controller-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for MoDaC API — doe-create-bulk-datafile-controller. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: createdatafile
+      description: createdatafile
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-doe-create-bulk-datafile-controller.createdatafile
+      with:
+        isFormBulkAssetUpload: tools.isFormBulkAssetUpload
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

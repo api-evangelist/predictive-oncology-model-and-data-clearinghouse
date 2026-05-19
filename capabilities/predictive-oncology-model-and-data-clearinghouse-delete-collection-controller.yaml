@@ -1,0 +1,81 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: MoDaC API — delete-collection-controller
+  description: 'MoDaC API — delete-collection-controller. 1 operations. Lead operation: delete-collection-controller. Self-contained
+    Naftiko capability covering one Predictive Oncology Model And Data Clearinghouse business surface.'
+  tags:
+  - Predictive Oncology Model And Data Clearinghouse
+  - delete-collection-controller
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PREDICTIVE_ONCOLOGY_MODEL_AND_DATA_CLEARINGHOUSE_API_KEY: PREDICTIVE_ONCOLOGY_MODEL_AND_DATA_CLEARINGHOUSE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: predictive-oncology-model-and-data-clearinghouse-delete-collection-controller
+    baseUri: http://localhost:8080
+    description: MoDaC API — delete-collection-controller business capability. Self-contained, no shared references.
+    resources:
+    - name: deleteCollection
+      path: /deleteCollection
+      operations:
+      - name: deletcollection
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: collPath
+          in: query
+          type: string
+          required: true
+        - name: collectionType
+          in: query
+          type: string
+  exposes:
+  - type: rest
+    namespace: predictive-oncology-model-and-data-clearinghouse-delete-collection-controller-rest
+    port: 8080
+    description: REST adapter for MoDaC API — delete-collection-controller. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/deletecollection
+      name: deletecollection
+      description: REST surface for deleteCollection.
+      operations:
+      - method: POST
+        name: deletcollection
+        description: deletcollection
+        call: predictive-oncology-model-and-data-clearinghouse-delete-collection-controller.deletcollection
+        with:
+          collPath: rest.collPath
+          collectionType: rest.collectionType
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: predictive-oncology-model-and-data-clearinghouse-delete-collection-controller-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for MoDaC API — delete-collection-controller. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: deletcollection
+      description: deletcollection
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: predictive-oncology-model-and-data-clearinghouse-delete-collection-controller.deletcollection
+      with:
+        collPath: tools.collPath
+        collectionType: tools.collectionType
+      outputParameters:
+      - type: object
+        mapping: $.
