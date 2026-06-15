@@ -1,0 +1,741 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "rest-api-common-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "bulkRegistration",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8080/api/v2/registration",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getDataObject",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v2/dataObject/**",
+            "params": [
+              {
+                "name": "includeAcl",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "excludeParentMetadata",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "registerDataObject",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8080/api/v2/dataObject/**",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getCollection",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/collection/**",
+            "params": [
+              {
+                "name": "list",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "includeAcl",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "registerCollection",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8080/api/collection/**",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "downloadDataObjectsOrCollections",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v2/download",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "syncAndasynchronousDownload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v2/dataObject/**/download",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "collectionDownload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v2/collection/**/download",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "performModelEvaluationForReferenceDatasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/models/evaluate/**",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getStatusByTaskId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/model/evaluate/**"
+          }
+        },
+        {
+          "info": {
+            "name": "performModelEvaluationForDatasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/model/evaluate/**",
+            "params": [
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "queryDataObjects",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/dataObject/query",
+            "params": [
+              {
+                "name": "returnParent",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "synchronousDownload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/dataObject/**/syncDownload"
+          }
+        },
+        {
+          "info": {
+            "name": "generateDownloadRequestURL",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/dataObject/**/generateDownloadRequestURL"
+          }
+        },
+        {
+          "info": {
+            "name": "queryCollections",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/collection/query",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getDataObjectsRegistrationStatus",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v2/registration/**"
+          }
+        },
+        {
+          "info": {
+            "name": "getDataObjectsOrCollectionsDownloadStatus",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/download/**"
+          }
+        },
+        {
+          "info": {
+            "name": "getDataObjectDownloadStatus",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/dataObject/download/**"
+          }
+        },
+        {
+          "info": {
+            "name": "getCollectionDownloadStatus",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/collection/download/**"
+          }
+        },
+        {
+          "info": {
+            "name": "authenticate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/authenticate"
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "doe-retry-uploadtask-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "retryUpload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/uploadtask",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "taskName",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "asset-details-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "savePredictionAccessGroups",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/predictionAccessGroups",
+            "params": [
+              {
+                "name": "predCollId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "predCollPath",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "selectedGrps[]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "isPublic",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "perform-inferencing-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "performInfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/performInferencing",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "performModelAnalysis",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/performInferencing/performModelAnalysis",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "home-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "savePermissionsList",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/metaDataPermissionsList",
+            "params": [
+              {
+                "name": "collectionId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "path",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "selectedPermissions[]",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "release-notes-notifications-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "sendEmailUpdates",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/emailNotifications/subscribe",
+            "params": [
+              {
+                "name": "emailAddress",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "doe-retry-download-task-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "retryDownload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/downloadtask",
+            "params": [
+              {
+                "name": "taskName",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "taskType",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "doe-sync-download-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "download",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/downloadsync",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "doe-download-files-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "download_1",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/downloadfiles/download",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "doe-download-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "download_2",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/download",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "delete-predictions-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "deletePredictions",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/deletePredictions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "delete-collection-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "deletCollection",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/deleteCollection",
+            "params": [
+              {
+                "name": "collPath",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "collectionType",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "delete-data-file-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "deleteObject",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/delete/datafile",
+            "params": [
+              {
+                "name": "deletepath",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "doe-collection-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "updateCollection",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/collection",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "doe-create-bulk-datafile-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "createDatafile",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/addbulk",
+            "params": [
+              {
+                "name": "isFormBulkAssetUpload",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "doe-create-datafile-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "createDatafile_1",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/addDatafile",
+            "params": [
+              {
+                "name": "dataFilePath",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "doe-create-collection-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "createCollection",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/addCollection",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
