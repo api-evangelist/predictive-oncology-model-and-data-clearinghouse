@@ -44,6 +44,8 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/predictive-oncology-model-and-data-clearinghouse/refs/heads/main/openapi/predictive-oncology-model-and-data-clearinghouse-openapi.json
 common:
+  - type: DomainSecurity
+    url: security/predictive-oncology-model-and-data-clearinghouse-domain-security.yml
   - type: Portal
     url: https://modac.cancer.gov/
   - type: About
