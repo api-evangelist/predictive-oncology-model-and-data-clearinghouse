@@ -1,0 +1,33 @@
+openapi: 3.0.1
+info:
+  title: MoDaC asset-details-controller doe-retry-uploadtask-controller API
+  description: MoDaC API is a set of public rest API to access datasets stored in the repository
+servers:
+- url: http://localhost:8080
+  description: Generated server url
+tags:
+- name: doe-retry-uploadtask-controller
+paths:
+  /uploadtask:
+    post:
+      tags:
+      - doe-retry-uploadtask-controller
+      operationId: retryUpload
+      parameters:
+      - name: taskId
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: taskName
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
