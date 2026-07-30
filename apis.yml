@@ -7,9 +7,21 @@ description: >-
   discovering cancer research datasets and trained models, fostering collaboration among researchers and accelerating
   the advancement of cancer therapies.
 kind: contract
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/predictive-oncology-model-and-data-clearinghouse.png
 tags:
   - Cancer Research
   - Clinical Data
@@ -22,27 +34,295 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/predictive-oncology-model-and-data-clearinghouse/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: predictive-oncology-model-and-data-clearinghouse:modac-api
-    name: MoDaC REST API
-    description: >-
-      The MoDaC REST API provides programmatic access to upload and download assets, manage associated metadata, and
-      search for assets against these metadata. Assets include datasets and machine learning models contributed by the
-      cancer research community. The API is documented in OpenAPI 3.0 format and exposes endpoints for bulk
-      registration, data object and collection management, metadata queries, and permissions handling.
-    humanURL: https://modac.cancer.gov/
-    tags:
-      - Cancer Research
-      - Datasets
-      - Machine Learning
-      - REST API
-    properties:
-      - type: Documentation
-        url: https://modac.cancer.gov/
-      - type: Swagger UI
-        url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/predictive-oncology-model-and-data-clearinghouse/refs/heads/main/openapi/predictive-oncology-model-and-data-clearinghouse-openapi.json
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-asset-details-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse asset-details-controller API
+  description: >-
+    The asset-details-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
+    for asset-details-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - asset-details-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-asset-details-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-delete-collection-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse delete-collection-controller API
+  description: >-
+    The delete-collection-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
+    for delete-collection-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - delete-collection-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-delete-collection-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-delete-data-file-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse delete-data-file-controller API
+  description: >-
+    The delete-data-file-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
+    for delete-data-file-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - delete-data-file-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-delete-data-file-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-delete-predictions-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse delete-predictions-controller API
+  description: >-
+    The delete-predictions-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
+    for delete-predictions-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - delete-predictions-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-delete-predictions-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-collection-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse doe-collection-controller API
+  description: >-
+    The doe-collection-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
+    for doe-collection-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - doe-collection-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-doe-collection-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-create-bulk-datafile-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse doe-create-bulk-datafile-controller API
+  description: >-
+    The doe-create-bulk-datafile-controller API from Predictive Oncology Model and Data Clearinghouse
+    — 1 operation(s) for doe-create-bulk-datafile-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - doe-create-bulk-datafile-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-doe-create-bulk-datafile-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-create-collection-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse doe-create-collection-controller API
+  description: >-
+    The doe-create-collection-controller API from Predictive Oncology Model and Data Clearinghouse — 1
+    operation(s) for doe-create-collection-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - doe-create-collection-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-doe-create-collection-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-create-datafile-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse doe-create-datafile-controller API
+  description: >-
+    The doe-create-datafile-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
+    for doe-create-datafile-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - doe-create-datafile-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-doe-create-datafile-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-download-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse doe-download-controller API
+  description: >-
+    The doe-download-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
+    for doe-download-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - doe-download-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-doe-download-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-download-files-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse doe-download-files-controller API
+  description: >-
+    The doe-download-files-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
+    for doe-download-files-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - doe-download-files-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-doe-download-files-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-retry-download-task-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse doe-retry-download-task-controller API
+  description: >-
+    The doe-retry-download-task-controller API from Predictive Oncology Model and Data Clearinghouse —
+    1 operation(s) for doe-retry-download-task-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - doe-retry-download-task-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-doe-retry-download-task-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-retry-uploadtask-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse doe-retry-uploadtask-controller API
+  description: >-
+    The doe-retry-uploadtask-controller API from Predictive Oncology Model and Data Clearinghouse — 1
+    operation(s) for doe-retry-uploadtask-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - doe-retry-uploadtask-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-doe-retry-uploadtask-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-sync-download-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse doe-sync-download-controller API
+  description: >-
+    The doe-sync-download-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
+    for doe-sync-download-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - doe-sync-download-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-doe-sync-download-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-home-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse home-controller API
+  description: >-
+    The home-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for
+    home-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - home-controller
+  properties:
+  - type: OpenAPI
+    url: openapi/predictive-oncology-model-and-data-clearinghouse-home-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-perform-inferencing-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse perform-inferencing-controller API
+  description: >-
+    The perform-inferencing-controller API from Predictive Oncology Model and Data Clearinghouse — 2 operation(s)
+    for perform-inferencing-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - perform-inferencing-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-perform-inferencing-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-release-notes-notifications-controller-api
+  name: >-
+    Predictive Oncology Model and Data Clearinghouse release-notes-notifications-controller API
+  description: >-
+    The release-notes-notifications-controller API from Predictive Oncology Model and Data Clearinghouse
+    — 1 operation(s) for release-notes-notifications-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - release-notes-notifications-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-release-notes-notifications-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
+- aid: >-
+    predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller-api
+  name: Predictive Oncology Model and Data Clearinghouse rest-api-common-controller API
+  description: >-
+    The rest-api-common-controller API from Predictive Oncology Model and Data Clearinghouse — 17 operation(s)
+    for rest-api-common-controller.
+  humanURL: https://modac.cancer.gov/
+  tags:
+  - rest-api-common-controller
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller-api-openapi.yml
+  - type: Documentation
+    url: https://modac.cancer.gov/
+  - type: Swagger UI
+    url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 common:
   - type: AgenticAccess
     url: agentic-access/predictive-oncology-model-and-data-clearinghouse-agentic-access.yml
