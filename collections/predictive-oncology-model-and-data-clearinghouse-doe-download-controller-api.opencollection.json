@@ -1,0 +1,31 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC asset-details-controller doe-download-controller API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "doe-download-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "download_2",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/download",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

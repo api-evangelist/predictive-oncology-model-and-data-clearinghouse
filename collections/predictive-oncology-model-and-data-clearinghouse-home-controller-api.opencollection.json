@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC asset-details-controller home-controller API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "home-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "savePermissionsList",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/metaDataPermissionsList",
+            "params": [
+              {
+                "name": "collectionId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "path",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "selectedPermissions[]",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

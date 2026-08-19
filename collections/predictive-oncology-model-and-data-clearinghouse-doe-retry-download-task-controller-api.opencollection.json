@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC asset-details-controller doe-retry-download-task-controller API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "doe-retry-download-task-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "retryDownload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/downloadtask",
+            "params": [
+              {
+                "name": "taskName",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "taskType",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

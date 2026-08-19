@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC asset-details-controller delete-collection-controller API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "delete-collection-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "deletCollection",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/deleteCollection",
+            "params": [
+              {
+                "name": "collPath",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "collectionType",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

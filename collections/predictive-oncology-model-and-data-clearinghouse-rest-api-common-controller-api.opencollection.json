@@ -1,0 +1,295 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC asset-details-controller rest-api-common-controller API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "rest-api-common-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "bulkRegistration",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8080/api/v2/registration",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getDataObject",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v2/dataObject/**",
+            "params": [
+              {
+                "name": "includeAcl",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "excludeParentMetadata",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "registerDataObject",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8080/api/v2/dataObject/**",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getCollection",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/collection/**",
+            "params": [
+              {
+                "name": "list",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "includeAcl",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "registerCollection",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8080/api/collection/**",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "downloadDataObjectsOrCollections",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v2/download",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "syncAndasynchronousDownload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v2/dataObject/**/download",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "collectionDownload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v2/collection/**/download",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "performModelEvaluationForReferenceDatasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/models/evaluate/**",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getStatusByTaskId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/model/evaluate/**"
+          }
+        },
+        {
+          "info": {
+            "name": "performModelEvaluationForDatasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/model/evaluate/**",
+            "params": [
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "queryDataObjects",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/dataObject/query",
+            "params": [
+              {
+                "name": "returnParent",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "synchronousDownload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/dataObject/**/syncDownload"
+          }
+        },
+        {
+          "info": {
+            "name": "generateDownloadRequestURL",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/dataObject/**/generateDownloadRequestURL"
+          }
+        },
+        {
+          "info": {
+            "name": "queryCollections",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/collection/query",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getDataObjectsRegistrationStatus",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v2/registration/**"
+          }
+        },
+        {
+          "info": {
+            "name": "getDataObjectsOrCollectionsDownloadStatus",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/download/**"
+          }
+        },
+        {
+          "info": {
+            "name": "getDataObjectDownloadStatus",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/dataObject/download/**"
+          }
+        },
+        {
+          "info": {
+            "name": "getCollectionDownloadStatus",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/collection/download/**"
+          }
+        },
+        {
+          "info": {
+            "name": "authenticate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/authenticate"
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

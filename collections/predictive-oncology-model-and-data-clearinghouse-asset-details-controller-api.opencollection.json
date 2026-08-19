@@ -1,0 +1,49 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC asset-details-controller API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "asset-details-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "savePredictionAccessGroups",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/predictionAccessGroups",
+            "params": [
+              {
+                "name": "predCollId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "predCollPath",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "selectedGrps[]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "isPublic",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

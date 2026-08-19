@@ -1,0 +1,34 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC asset-details-controller release-notes-notifications-controller API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "release-notes-notifications-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "sendEmailUpdates",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/emailNotifications/subscribe",
+            "params": [
+              {
+                "name": "emailAddress",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

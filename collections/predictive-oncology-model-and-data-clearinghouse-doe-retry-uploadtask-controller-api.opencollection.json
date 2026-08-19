@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC asset-details-controller doe-retry-uploadtask-controller API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "doe-retry-uploadtask-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "retryUpload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/uploadtask",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "taskName",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

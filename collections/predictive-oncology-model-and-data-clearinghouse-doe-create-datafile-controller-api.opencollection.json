@@ -1,0 +1,38 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC asset-details-controller doe-create-datafile-controller API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "doe-create-datafile-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "createDatafile_1",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/addDatafile",
+            "params": [
+              {
+                "name": "dataFilePath",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,38 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC asset-details-controller doe-create-bulk-datafile-controller API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "doe-create-bulk-datafile-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "createDatafile",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/addbulk",
+            "params": [
+              {
+                "name": "isFormBulkAssetUpload",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

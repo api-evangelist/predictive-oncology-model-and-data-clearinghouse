@@ -1,0 +1,31 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC asset-details-controller delete-predictions-controller API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "delete-predictions-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "deletePredictions",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/deletePredictions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

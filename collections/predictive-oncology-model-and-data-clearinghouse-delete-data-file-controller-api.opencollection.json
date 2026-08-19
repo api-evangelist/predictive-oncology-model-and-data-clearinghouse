@@ -1,0 +1,34 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MoDaC asset-details-controller delete-data-file-controller API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "delete-data-file-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "deleteObject",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/delete/datafile",
+            "params": [
+              {
+                "name": "deletepath",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
