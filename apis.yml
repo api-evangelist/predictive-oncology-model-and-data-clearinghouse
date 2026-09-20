@@ -342,6 +342,10 @@ apis:
   - type: Swagger UI
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 common:
+  - type: Pricing
+    url: https://chtn.cancer.gov/pricing/commercial.html
+  - type: Plans
+    url: plans/predictive-oncology-model-and-data-clearinghouse-plans-pricing.yml
   - type: Website
     url: https://www.cancer.gov/
   - type: CapabilityMap

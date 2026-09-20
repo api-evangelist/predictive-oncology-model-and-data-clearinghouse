@@ -1,146 +1,163 @@
-specification: API Commons Plans
-specificationVersion: '0.1'
-schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
-provider: Predictive Oncology Model and Data Clearinghouse
-providerId: predictive-oncology-model-and-data-clearinghouse
-created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
-tags:
-  - Cancer Research
-  - Clinical Data
-  - Datasets
-  - Machine Learning
-  - Oncology
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-09-20'
+method: searched
+source: https://chtn.cancer.gov/pricing/commercial.html
+sources:
+- https://chtn.cancer.gov/pricing/commercial.html
+provenance:
+  tool: planning/api-economics/harvest_pricing.py
+  run: 20260920T125857
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: usage-other
+published: true
+note: CHTN commercial/for-profit fee schedule for biospecimens, histology, imaging and services, effective
+  February 1, 2025. Not an API pricing page; charges are per specimen/slide/hour.
+plan_count: 26
+currency: USD
 plans:
-  - id: predictive-oncology-model-and-data-clearinghouse-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the Predictive Oncology Model and Data Clearinghouse API surface.
-      Intended for evaluation, prototyping, and low-volume integrations. Real limits and pricing must
-      be reconciled with the provider's published plan documentation.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: MoDaC REST API
-  - id: predictive-oncology-model-and-data-clearinghouse-pro
-    name: Professional
-    type: paid
-    description: Production tier for Predictive Oncology Model and Data Clearinghouse. Provides higher
-      quotas, priority support, and access to the broader API portfolio. Pricing placeholder; align with
-      the provider's pricing page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: MoDaC REST API
-  - id: predictive-oncology-model-and-data-clearinghouse-enterprise
-    name: Enterprise
-    type: enterprise
-    description: Custom-negotiated tier for Predictive Oncology Model and Data Clearinghouse. Includes
-      dedicated capacity, contractual SLAs, security review, data residency options, and named technical
-      account management.
-    entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-    elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: MoDaC REST API
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- name: Solid Tissue Biospecimen Collection
+  price_text: $300.00 USD
+  price: 300
+  currency: USD
+  period: per-use
+  unit: per specimen
+- name: Frozen Banked Biofluids
+  price_text: $200.00 USD
+  price: 200
+  currency: USD
+  period: per-use
+- name: Expedited Handling Fee per Shipment
+  price_text: $100.00 USD
+  price: 100
+  currency: USD
+  period: per-use
+  unit: per shipment
+- name: Access to Tissue Charge
+  price_text: $300.00 USD
+  price: 300
+  currency: USD
+  period: per-use
+  unit: per donor
+- name: Fresh Tube of Whole Blood or other Biofluid
+  price_text: $250.00 USD
+  price: 250
+  currency: USD
+  period: per-use
+  unit: per tube
+- name: Cryopreserved PBMCs
+  price_text: $416.15 USD
+  price: 416.15
+  currency: USD
+  period: per-use
+- name: Chart Review
+  price_text: $100.00 USD
+  price: 100
+  currency: USD
+  period: per-use
+  unit: per case per hour
+- name: Specialized Service Fee (per hour)
+  price_text: $50.00 USD
+  price: 50
+  currency: USD
+  period: per-use
+  unit: per hour (one hour minimum)
+- name: H&E Slide from Paraffin Block
+  price_text: $15.00 USD
+  price: 15
+  currency: USD
+  period: per-use
+  unit: per slide
+- name: Unstained Slide from Paraffin Block
+  price_text: $8.00 USD
+  price: 8
+  currency: USD
+  period: per-use
+  unit: per slide
+- name: Cryostat Cut H&E Stained Slide
+  price_text: $21.00 USD
+  price: 21
+  currency: USD
+  period: per-use
+  unit: per slide
+- name: Cryostat Unstained Slides
+  price_text: $14.00 USD
+  price: 14
+  currency: USD
+  period: per-use
+  unit: per slide
+- name: Ribbon or Scrolls
+  price_text: $15.00 USD
+  price: 15
+  currency: USD
+  period: per-use
+  unit: per scroll or ribbon
+- name: Touch Preps
+  price_text: $6.00 USD
+  price: 6
+  currency: USD
+  period: per-use
+- name: 20 Micron Sections
+  price_text: $20.00 USD
+  price: 20
+  currency: USD
+  period: per-use
+- name: Light Microscopy Whole Slide Imaging Static Image
+  price_text: $15.00 USD
+  price: 15
+  currency: USD
+  period: per-use
+- name: High-Resolution Digital Image of Standard Microscope
+  price_text: $25.00 USD
+  price: 25
+  currency: USD
+  period: per-use
+- name: 20X Whole Slide Image
+  price_text: $25.00 USD
+  price: 25
+  currency: USD
+  period: per-use
+- name: 40X Whole Slide Image
+  price_text: $40.00 USD
+  price: 40
+  currency: USD
+  period: per-use
+  unit: per slide
+- name: 20X Tissue Microarray Slide
+  price_text: $50.00 USD
+  price: 50
+  currency: USD
+  period: per-use
+  unit: per slide
+- name: 40X Tissue Microarray Slide
+  price_text: $75.00 USD
+  price: 75
+  currency: USD
+  period: per-use
+  unit: per slide
+- name: Storage Medium for Images (DVD)
+  price_text: $5.00 USD
+  price: 5
+  currency: USD
+  period: per-use
+  unit: per disk
+- name: 128GB Portable Drive
+  price_text: $70.00 USD
+  price: 70
+  currency: USD
+  period: per-use
+- name: 1 TB Portable Drive
+  price_text: $90.00 USD
+  price: 90
+  currency: USD
+  period: per-use
+- name: 2TB Portable Drive
+  price_text: $125.00 USD
+  price: 125
+  currency: USD
+  period: per-use
+- name: Customer Provided External Storage
+  price_text: $40.00 USD
+  price: 40
+  currency: USD
+  period: per-use
