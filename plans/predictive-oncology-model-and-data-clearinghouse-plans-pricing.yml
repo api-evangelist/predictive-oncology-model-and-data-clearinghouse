@@ -10,6 +10,10 @@ provenance:
   grounding: every price_text was found verbatim in the fetched page text
 audience: business-product
 pricing_basis: usage-other
+delivery:
+  delivery: managed
+  method: keyword-prefilter
+  read: '2026-09-20'
 published: true
 note: CHTN commercial/for-profit fee schedule for biospecimens, histology, imaging and services, effective
   February 1, 2025. Not an API pricing page; charges are per specimen/slide/hour.
