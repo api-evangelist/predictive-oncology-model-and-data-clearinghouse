@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: MoDaC asset-details-controller home-controller API
+  title: MoDaC Home Controller API
   description: MoDaC API is a set of public rest API to access datasets stored in the repository
 servers:
 - url: http://localhost:8080
@@ -38,3 +38,5 @@ paths:
             '*/*':
               schema:
                 type: string
+      summary: Save permissions list
+      x-summary-source: derived

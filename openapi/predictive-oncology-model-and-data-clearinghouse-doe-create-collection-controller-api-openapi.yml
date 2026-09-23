@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: MoDaC asset-details-controller doe-create-collection-controller API
+  title: MoDaC Doe Create Collection Controller API
   description: MoDaC API is a set of public rest API to access datasets stored in the repository
 servers:
 - url: http://localhost:8080
@@ -25,8 +25,90 @@ paths:
             '*/*':
               schema:
                 type: string
+      summary: Create collection
+      x-summary-source: derived
 components:
   schemas:
+    DoeMetadataAttrEntry:
+      type: object
+      properties:
+        attrName:
+          type: string
+        attrValue:
+          type: string
+        attrUnit:
+          type: string
+        systemAttr:
+          type: boolean
+        validValues:
+          type: array
+          items:
+            $ref: '#/components/schemas/KeyValueBean'
+        defaultValue:
+          type: string
+        description:
+          type: string
+        mandatory:
+          type: boolean
+        displayName:
+          type: string
+        isEditable:
+          type: boolean
+        displayOrder:
+          type: integer
+          format: int32
+        controllerAttribute:
+          type: boolean
+        isVisible:
+          type: boolean
+        isVisibleOnUplaodPage:
+          type: boolean
+        isVisibleForReviewCommiteeMember:
+          type: boolean
+        controllerAttrName:
+          type: string
+        controllerAttrValue:
+          type: string
+    KeyValueBean:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+        displayName:
+          type: string
+        displayOrder:
+          type: integer
+          format: int32
+    DoeCollectionModel:
+      type: object
+      properties:
+        path:
+          type: string
+        collection:
+          $ref: '#/components/schemas/HpcCollection'
+        selfMetadataEntries:
+          type: array
+          items:
+            $ref: '#/components/schemas/DoeMetadataAttrEntry'
+        parentMetadataEntries:
+          type: array
+          items:
+            $ref: '#/components/schemas/DoeMetadataAttrEntry'
+        attributes:
+          type: object
+          additionalProperties:
+            type: string
+        defaultValue:
+          type: string
+        validValues:
+          type: array
+          items:
+            type: string
+        dataObject:
+          type: string
+          writeOnly: true
     HpcCollectionListingEntry:
       type: object
       properties:
@@ -90,83 +172,3 @@ components:
         dataObjectsTotalRecords:
           type: integer
           format: int32
-    KeyValueBean:
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          type: string
-        displayName:
-          type: string
-        displayOrder:
-          type: integer
-          format: int32
-    DoeMetadataAttrEntry:
-      type: object
-      properties:
-        attrName:
-          type: string
-        attrValue:
-          type: string
-        attrUnit:
-          type: string
-        systemAttr:
-          type: boolean
-        validValues:
-          type: array
-          items:
-            $ref: '#/components/schemas/KeyValueBean'
-        defaultValue:
-          type: string
-        description:
-          type: string
-        mandatory:
-          type: boolean
-        displayName:
-          type: string
-        isEditable:
-          type: boolean
-        displayOrder:
-          type: integer
-          format: int32
-        controllerAttribute:
-          type: boolean
-        isVisible:
-          type: boolean
-        isVisibleOnUplaodPage:
-          type: boolean
-        isVisibleForReviewCommiteeMember:
-          type: boolean
-        controllerAttrName:
-          type: string
-        controllerAttrValue:
-          type: string
-    DoeCollectionModel:
-      type: object
-      properties:
-        path:
-          type: string
-        collection:
-          $ref: '#/components/schemas/HpcCollection'
-        selfMetadataEntries:
-          type: array
-          items:
-            $ref: '#/components/schemas/DoeMetadataAttrEntry'
-        parentMetadataEntries:
-          type: array
-          items:
-            $ref: '#/components/schemas/DoeMetadataAttrEntry'
-        attributes:
-          type: object
-          additionalProperties:
-            type: string
-        defaultValue:
-          type: string
-        validValues:
-          type: array
-          items:
-            type: string
-        dataObject:
-          type: string
-          writeOnly: true

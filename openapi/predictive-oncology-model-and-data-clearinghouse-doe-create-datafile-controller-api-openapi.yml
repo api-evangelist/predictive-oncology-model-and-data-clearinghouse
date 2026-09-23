@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: MoDaC asset-details-controller doe-create-datafile-controller API
+  title: MoDaC Doe Create Datafile Controller API
   description: MoDaC API is a set of public rest API to access datasets stored in the repository
 servers:
 - url: http://localhost:8080
@@ -39,6 +39,8 @@ paths:
             '*/*':
               schema:
                 type: string
+      summary: Create datafile 1
+      x-summary-source: derived
 components:
   schemas:
     KeyValueBean:
@@ -53,6 +55,21 @@ components:
         displayOrder:
           type: integer
           format: int32
+    DoeDatafileModel:
+      type: object
+      properties:
+        path:
+          type: string
+        dataObject:
+          $ref: '#/components/schemas/HpcDataObject'
+        selfMetadataEntries:
+          type: array
+          items:
+            $ref: '#/components/schemas/DoeMetadataAttrEntry'
+        parentMetadataEntries:
+          type: array
+          items:
+            $ref: '#/components/schemas/DoeMetadataAttrEntry'
     DoeMetadataAttrEntry:
       type: object
       properties:
@@ -118,18 +135,3 @@ components:
         createdAt:
           type: string
           format: date-time
-    DoeDatafileModel:
-      type: object
-      properties:
-        path:
-          type: string
-        dataObject:
-          $ref: '#/components/schemas/HpcDataObject'
-        selfMetadataEntries:
-          type: array
-          items:
-            $ref: '#/components/schemas/DoeMetadataAttrEntry'
-        parentMetadataEntries:
-          type: array
-          items:
-            $ref: '#/components/schemas/DoeMetadataAttrEntry'

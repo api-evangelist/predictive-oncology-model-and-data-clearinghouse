@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: MoDaC asset-details-controller doe-download-controller API
+  title: MoDaC Doe Download Controller API
   description: MoDaC API is a set of public rest API to access datasets stored in the repository
 servers:
 - url: http://localhost:8080
@@ -26,6 +26,8 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/AjaxResponseBody_Public'
+      summary: Download 2
+      x-summary-source: derived
 components:
   schemas:
     AjaxResponseBody_Public:
