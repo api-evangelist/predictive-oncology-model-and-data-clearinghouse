@@ -53,21 +53,6 @@ components:
         displayOrder:
           type: integer
           format: int32
-    DoeDatafileModel:
-      type: object
-      properties:
-        path:
-          type: string
-        dataObject:
-          $ref: '#/components/schemas/HpcDataObject'
-        selfMetadataEntries:
-          type: array
-          items:
-            $ref: '#/components/schemas/DoeMetadataAttrEntry'
-        parentMetadataEntries:
-          type: array
-          items:
-            $ref: '#/components/schemas/DoeMetadataAttrEntry'
     DoeMetadataAttrEntry:
       type: object
       properties:
@@ -108,6 +93,21 @@ components:
           type: string
         controllerAttrValue:
           type: string
+    DoeDatafileModel:
+      type: object
+      properties:
+        path:
+          type: string
+        dataObject:
+          $ref: '#/components/schemas/HpcDataObject'
+        selfMetadataEntries:
+          type: array
+          items:
+            $ref: '#/components/schemas/DoeMetadataAttrEntry'
+        parentMetadataEntries:
+          type: array
+          items:
+            $ref: '#/components/schemas/DoeMetadataAttrEntry'
     HpcDataObject:
       type: object
       properties:

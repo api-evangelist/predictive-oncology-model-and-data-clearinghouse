@@ -38,7 +38,7 @@ tags:
   - Cancer Research
   - Clinical Data
   - Datasets
-  - Machine-Learning
+  - Machine Learning
   - Oncology
 tags_raw:
   - Cancer Research
@@ -46,6 +46,7 @@ tags_raw:
   - Datasets
   - Machine Learning
   - Oncology
+  - Machine-Learning
 created: '2024-11-07'
 modified: '2026-05-19'
 url: >-
@@ -54,7 +55,7 @@ specificationVersion: '0.23'
 apis:
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-asset-details-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse asset-details-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Asset Details Controller API
   description: >-
     The asset-details-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
     for asset-details-controller.
@@ -71,7 +72,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-delete-collection-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse delete-collection-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Delete Collection Controller API
   description: >-
     The delete-collection-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
     for delete-collection-controller.
@@ -88,7 +89,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-delete-data-file-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse delete-data-file-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Delete Data File Controller API
   description: >-
     The delete-data-file-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
     for delete-data-file-controller.
@@ -105,7 +106,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-delete-predictions-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse delete-predictions-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Delete Predictions Controller API
   description: >-
     The delete-predictions-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
     for delete-predictions-controller.
@@ -122,7 +123,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-collection-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse doe-collection-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Collection Controller API
   description: >-
     The doe-collection-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
     for doe-collection-controller.
@@ -139,7 +140,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-create-bulk-datafile-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse doe-create-bulk-datafile-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Create Bulk Datafile Controller API
   description: >-
     The doe-create-bulk-datafile-controller API from Predictive Oncology Model and Data Clearinghouse
     — 1 operation(s) for doe-create-bulk-datafile-controller.
@@ -156,7 +157,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-create-collection-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse doe-create-collection-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Create Collection Controller API
   description: >-
     The doe-create-collection-controller API from Predictive Oncology Model and Data Clearinghouse — 1
     operation(s) for doe-create-collection-controller.
@@ -173,7 +174,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-create-datafile-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse doe-create-datafile-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Create Datafile Controller API
   description: >-
     The doe-create-datafile-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
     for doe-create-datafile-controller.
@@ -190,7 +191,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-download-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse doe-download-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Download Controller API
   description: >-
     The doe-download-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
     for doe-download-controller.
@@ -207,7 +208,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-download-files-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse doe-download-files-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Download Files Controller API
   description: >-
     The doe-download-files-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
     for doe-download-files-controller.
@@ -224,7 +225,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-retry-download-task-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse doe-retry-download-task-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Retry Download Task Controller API
   description: >-
     The doe-retry-download-task-controller API from Predictive Oncology Model and Data Clearinghouse —
     1 operation(s) for doe-retry-download-task-controller.
@@ -241,7 +242,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-retry-uploadtask-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse doe-retry-uploadtask-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Retry Uploadtask Controller API
   description: >-
     The doe-retry-uploadtask-controller API from Predictive Oncology Model and Data Clearinghouse — 1
     operation(s) for doe-retry-uploadtask-controller.
@@ -258,7 +259,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-doe-sync-download-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse doe-sync-download-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Sync Download Controller API
   description: >-
     The doe-sync-download-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s)
     for doe-sync-download-controller.
@@ -275,7 +276,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-home-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse home-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Home Controller API
   description: >-
     The home-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for
     home-controller.
@@ -291,7 +292,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-perform-inferencing-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse perform-inferencing-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Perform Inferencing Controller API
   description: >-
     The perform-inferencing-controller API from Predictive Oncology Model and Data Clearinghouse — 2 operation(s)
     for perform-inferencing-controller.
@@ -326,7 +327,7 @@ apis:
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 - aid: >-
     predictive-oncology-model-and-data-clearinghouse:predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller-api
-  name: Predictive Oncology Model and Data Clearinghouse rest-api-common-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Rest API Common Controller API
   description: >-
     The rest-api-common-controller API from Predictive Oncology Model and Data Clearinghouse — 17 operation(s)
     for rest-api-common-controller.
