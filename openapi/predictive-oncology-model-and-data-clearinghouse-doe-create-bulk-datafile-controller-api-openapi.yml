@@ -41,6 +41,46 @@ paths:
       x-summary-source: derived
 components:
   schemas:
+    HpcDataObject:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        collectionId:
+          type: integer
+          format: int32
+        dataName:
+          type: string
+        collectionName:
+          type: string
+        absolutePath:
+          type: string
+        dataSize:
+          type: integer
+          format: int64
+        dataPath:
+          type: string
+        dataOwnerName:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+    DoeDatafileModel:
+      type: object
+      properties:
+        path:
+          type: string
+        dataObject:
+          $ref: '#/components/schemas/HpcDataObject'
+        selfMetadataEntries:
+          type: array
+          items:
+            $ref: '#/components/schemas/DoeMetadataAttrEntry'
+        parentMetadataEntries:
+          type: array
+          items:
+            $ref: '#/components/schemas/DoeMetadataAttrEntry'
     KeyValueBean:
       type: object
       properties:
@@ -93,43 +133,3 @@ components:
           type: string
         controllerAttrValue:
           type: string
-    DoeDatafileModel:
-      type: object
-      properties:
-        path:
-          type: string
-        dataObject:
-          $ref: '#/components/schemas/HpcDataObject'
-        selfMetadataEntries:
-          type: array
-          items:
-            $ref: '#/components/schemas/DoeMetadataAttrEntry'
-        parentMetadataEntries:
-          type: array
-          items:
-            $ref: '#/components/schemas/DoeMetadataAttrEntry'
-    HpcDataObject:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        collectionId:
-          type: integer
-          format: int32
-        dataName:
-          type: string
-        collectionName:
-          type: string
-        absolutePath:
-          type: string
-        dataSize:
-          type: integer
-          format: int64
-        dataPath:
-          type: string
-        dataOwnerName:
-          type: string
-        createdAt:
-          type: string
-          format: date-time
