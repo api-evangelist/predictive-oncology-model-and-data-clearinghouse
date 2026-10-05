@@ -1,0 +1,12 @@
+{
+ "url": "https://modac.cancer.gov/v3/api-docs",
+ "requested_url": "https://modac.cancer.gov/v3/api-docs",
+ "status": 200,
+ "content_type": "application/json",
+ "bytes": 30547,
+ "sha256": "7b2fb25cac04d7378704eb7a4c8b77a49d8ae160923dac1d7e617b2c9f18a42c",
+ "fetched_at": "2026-10-04",
+ "fetched_by": "APIEvangelist-Harvest/1.0 (+https://apievangelist.com)",
+ "match": "byte-identical",
+ "note": "Re-fetched from the provider by verify-openapi-sources.py; the archived file is byte-identical to what the provider serves."
+}
