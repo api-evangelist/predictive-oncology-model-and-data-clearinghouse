@@ -343,6 +343,10 @@ apis:
   - type: Swagger UI
     url: https://modac.cancer.gov/swagger-ui/4.14.0/index.html
 common:
+  - type: RateLimits
+    url: rate-limits/predictive-oncology-model-and-data-clearinghouse-rate-limits.yml
+  - type: FinOps
+    url: finops/predictive-oncology-model-and-data-clearinghouse-finops.yml
   - type: Pricing
     url: https://chtn.cancer.gov/pricing/commercial.html
   - type: Plans
