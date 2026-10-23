@@ -33,3 +33,9 @@ paths:
                 type: string
       summary: Delet collection
       x-summary-source: derived
+x-provenance:
+  method: harvested
+  publisher: Predictive Oncology Model and Data Clearinghouse
+  source: https://modac.cancer.gov/v3/api-docs
+  note: split by refine-openapis from the provider's own published document, verified by fetch (openapi/_original/*.fetch.json);
+    stamped by stamp-openapi-provenance.py (roadmap#793)
