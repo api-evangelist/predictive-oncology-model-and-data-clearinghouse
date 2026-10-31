@@ -1,4 +1,4 @@
-# Predictive Oncology Model and Data Clearinghouse (predictive-oncology-model-and-data-clearinghouse)
+# Predictive Oncology Model and Data Clearinghouse
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,56 +66,145 @@
 
 The Predictive Oncology Model and Data Clearinghouse (MoDaC) is a National Cancer Institute platform that supports cancer research through advanced algorithms and machine learning techniques to analyze complex datasets, including genetic information, clinical data, and imaging studies. MoDaC serves as a centralized hub for storing, sharing, and discovering cancer research datasets and trained models, fostering collaboration among researchers and accelerating the advancement of cancer therapies.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/predictive-oncology-model-and-data-clearinghouse/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/predictive-oncology-model-and-data-clearinghouse/refs/heads/main/apis.yml)
+**Areas:** Cancer Research · Clinical Data · Datasets · Machine Learning · Oncology
 
-## Scope
+## Predictive Oncology Model and Data Clearinghouse on APIs.io
 
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Predictive Oncology Model and Data Clearinghouse is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/predictive-oncology-model-and-data-clearinghouse/](https://apis.io/providers/predictive-oncology-model-and-data-clearinghouse/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (17)
 
-- Cancer Research
-- Clinical Data
-- Datasets
-- Machine Learning
-- Oncology
+- [Predictive Oncology Model and Data Clearinghouse Asset Details Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-asset-details-controller-api/) — The asset-details-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for asset-details-controller.
+- [Predictive Oncology Model and Data Clearinghouse Delete Collection Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-delete-collection-controller-api/) — The delete-collection-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for delete-collection-controller.
+- [Predictive Oncology Model and Data Clearinghouse Delete Data File Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-delete-data-file-controller-api/) — The delete-data-file-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for delete-data-file-controller.
+- [Predictive Oncology Model and Data Clearinghouse Delete Predictions Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-delete-predictions-controller-api/) — The delete-predictions-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for delete-predictions-controller.
+- [Predictive Oncology Model and Data Clearinghouse Doe Collection Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-doe-collection-controller-api/) — The doe-collection-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-collection-controller.
+- [Predictive Oncology Model and Data Clearinghouse Doe Create Bulk Datafile Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-doe-create-bulk-datafile-controller-api/) — The doe-create-bulk-datafile-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-create-bulk-datafile-controller.
+- [Predictive Oncology Model and Data Clearinghouse Doe Create Collection Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-doe-create-collection-controller-api/) — The doe-create-collection-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-create-collection-controller.
+- [Predictive Oncology Model and Data Clearinghouse Doe Create Datafile Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-doe-create-datafile-controller-api/) — The doe-create-datafile-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-create-datafile-controller.
+- [Predictive Oncology Model and Data Clearinghouse Doe Download Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-doe-download-controller-api/) — The doe-download-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-download-controller.
+- [Predictive Oncology Model and Data Clearinghouse Doe Download Files Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-doe-download-files-controller-api/) — The doe-download-files-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-download-files-controller.
+- [Predictive Oncology Model and Data Clearinghouse Doe Retry Download Task Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-doe-retry-download-task-controller-api/) — The doe-retry-download-task-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-retry-download-task-controller.
+- [Predictive Oncology Model and Data Clearinghouse Doe Retry Uploadtask Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-doe-retry-uploadtask-controller-api/) — The doe-retry-uploadtask-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-retry-uploadtask-controller.
+- [Predictive Oncology Model and Data Clearinghouse Doe Sync Download Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-doe-sync-download-controller-api/) — The doe-sync-download-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-sync-download-controller.
+- [Predictive Oncology Model and Data Clearinghouse Home Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-home-controller-api/) — The home-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for home-controller.
+- [Predictive Oncology Model and Data Clearinghouse Perform Inferencing Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-perform-inferencing-controller-api/) — The perform-inferencing-controller API from Predictive Oncology Model and Data Clearinghouse — 2 operation(s) for perform-inferencing-controller.
+- [Predictive Oncology Model and Data Clearinghouse release-notes-notifications-controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-release-notes-notifications-controller-api/) — The release-notes-notifications-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for…
+- [Predictive Oncology Model and Data Clearinghouse Rest API Common Controller API](https://apis.io/apis/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller-api/) — The rest-api-common-controller API from Predictive Oncology Model and Data Clearinghouse — 17 operation(s) for rest-api-common-controller.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-11-07
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### MoDaC REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The MoDaC REST API provides programmatic access to upload and download assets, manage associated metadata, and search for assets against these metadata. Assets include datasets and machine learning models contributed by the cancer research community. The API is documented in OpenAPI 3.0 format and exposes endpoints for bulk registration, data object and collection management, metadata queries, and permissions handling.
+- [Predictive Oncology Model And Data Clearinghouse Agentic Access](https://apis.io/agentic-access/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-agentic-access/)
 
-- **Human URL:** [https://modac.cancer.gov/](https://modac.cancer.gov/)
+#### Collections (18)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Cancer Research
-- Datasets
-- Machine Learning
-- REST API
+- [MoDaC API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse/)
+- [MoDaC asset-details-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-asset-details-controller-api/)
+- [MoDaC asset-details-controller delete-collection-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-delete-collection-controller-api/)
+- [MoDaC asset-details-controller delete-data-file-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-delete-data-file-controller-api/)
+- [MoDaC asset-details-controller delete-predictions-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-delete-predictions-controller-api/)
+- [MoDaC asset-details-controller doe-collection-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-doe-collection-controller-api/)
+- [MoDaC asset-details-controller doe-create-bulk-datafile-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-doe-create-bulk-datafile-controller-api/)
+- [MoDaC asset-details-controller doe-create-collection-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-doe-create-collection-controller-api/)
+- [MoDaC asset-details-controller doe-create-datafile-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-doe-create-datafile-controller-api/)
+- [MoDaC asset-details-controller doe-download-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-doe-download-controller-api/)
+- [MoDaC asset-details-controller doe-download-files-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-doe-download-files-controller-api/)
+- [MoDaC asset-details-controller doe-retry-download-task-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-doe-retry-download-task-controller-api/)
+- [MoDaC asset-details-controller doe-retry-uploadtask-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-doe-retry-uploadtask-controller-api/)
+- [MoDaC asset-details-controller doe-sync-download-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-doe-sync-download-controller-api/)
+- [MoDaC asset-details-controller home-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-home-controller-api/)
+- [MoDaC asset-details-controller perform-inferencing-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-perform-inferencing-controller-api/)
+- [MoDaC asset-details-controller release-notes-notifications-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-release-notes-notifications-controller-api/)
+- [MoDaC asset-details-controller rest-api-common-controller API](https://apis.io/collections/predictive-oncology-model-and-data-clearinghouse/open-predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller-api/)
 
-#### Properties
+#### Security (1)
 
-- [Documentation](https://modac.cancer.gov/)
-- [Swagger  U I](https://modac.cancer.gov/swagger-ui/4.14.0/index.html)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/predictive-oncology-model-and-data-clearinghouse/refs/heads/main/openapi/predictive-oncology-model-and-data-clearinghouse-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Predictive Oncology Model And Data Clearinghouse Domain Security](https://apis.io/security/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-domain-security/)
 
-- [Portal](https://modac.cancer.gov/)
-- [About](https://modac.cancer.gov/aboutPage)
-- [Help](https://modac.cancer.gov/helpPage)
-- [Contact](https://modac.cancer.gov/contactUsPage)
-- [Login](https://modac.cancer.gov/login)
+#### Plans and pricing (1)
 
-## Maintainers
+Published plans, tiers and prices.
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+- [Predictive Oncology Model And Data Clearinghouse Plans Pricing](https://apis.io/plans/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Predictive Oncology Model And Data Clearinghouse Rate Limits](https://apis.io/rate-limits/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Predictive Oncology Model And Data Clearinghouse Finops](https://apis.io/finops/predictive-oncology-model-and-data-clearinghouse/predictive-oncology-model-and-data-clearinghouse-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.cancer.gov/)
+- [Pricing](https://chtn.cancer.gov/pricing/commercial.html)
+
+## API Evangelist rating
+
+**Kin Score 26.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 32.8 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 48.7 |
+
+**Agent readiness 15.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/predictive-oncology-model-and-data-clearinghouse/](https://apis.io/providers/predictive-oncology-model-and-data-clearinghouse/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Predictive Oncology Model and Data Clearinghouse: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/predictive-oncology-model-and-data-clearinghouse/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
